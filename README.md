@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# React Custom Hook Counter App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React application built using **Create React App (CRA)** that demonstrates how to create and use a **custom hook (`useCounter`)** to manage reusable counter logic. The project contains multiple independent counters that share the same custom hook while maintaining separate states.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Custom `useCounter` hook
+- Three independent counters
+- Increment and decrement by a step value of **5**
+- Reset counter to its initial value
+- Reusable `Counter` component
+- Clean and responsive user interface
+- Built with Functional Components and React Hooks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```text
+src/
+├── components/
+│   └── Counter.jsx
+├── hooks/
+│   └── useCounter.js
+├── App.js
+├── App.css
+├── index.js
+└── index.css
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React.js
+- JavaScript (ES6)
+- CSS3
+- Create React App (CRA)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+### 1. Clone the repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/YOUR_USERNAME/counter-app.git
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Navigate to the project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd counter-app
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 3. Install dependencies
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 4. Start the development server
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+The application will run at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+http://localhost:3000
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## How It Works
 
-### Making a Progressive Web App
+The custom hook `useCounter` accepts two parameters:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- `initialValue`
+- `step`
 
-### Advanced Configuration
+It returns:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- `count`
+- `increment()`
+- `decrement()`
+- `reset()`
 
-### Deployment
+Each `Counter` component uses the same hook, allowing the counter logic to be reused without duplicating code while keeping each counter's state independent.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Learning Objectives
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Understand React Custom Hooks
+- Reuse stateful logic across multiple components
+- Manage state using the `useState` hook
+- Build reusable React components
+- Improve code organization and maintainability
+
+---
+
+## Future Enhancements
+
+- Add user-defined step value
+- Add Dark Mode
+- Save counter values using Local Storage
+- Add animations and transitions
+- Display counter history
+
+---
+
+## Author
+
+**Abhiram Chundru**
